@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --beige: #f3e5d8;
+    --white: #ffffff;
+    --maroon: #4c482d;
+    --black: #000000;
+    --blue: #fff7fc;
+    --headings-font: "Outfit";
+    --text-font: "Zilla Slab";
+    --font-size: 1.3rem
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--beige);
+    color: var(--maroon);
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+main {
+    margin: 3rem auto;
+    padding: 1rem;
+    background-color: var(--white);
+    width: 30%;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-family: var(--text-font);
+}
+
+.container {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-family: var(--headings-font);
+    color: var(--black);
+    margin-top: 0.5rem;
+}
+
+h2 {
+    font-size: var(--font-size);
+    font-family: var(--headings-font);
+
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside; /* Place the bullet inside the padding area */
+}
+
+ul,ol li span {
+    position: relative;
+    right: -5px;
+}
+
+li {
+    margin: 0.3rem auto;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.box {
+    background-color: var(--blue);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.table div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.line {
+    margin: 1rem 0.4rem;
+    height: 0.1px;
+    background-color: var(--beige);
+}
+
+.table .line {
+    margin: 0.5rem 0;
+}
+
+.table span {
+    margin-left: 0.8rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+ol .bold {
+    margin-right: 0.3rem;
+}
