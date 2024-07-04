@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --black: #141414;
+    --second-black: #1f1f1f;
+    --third-black: #333333;
+    --yellow: #c4f82a;
+    --white: #ffffff;
+    --font: "Outfit";
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font);
+    background-color: var(--black);
+    color: var(--white);
+    height: 100vh;
+    font-size: 90%;
+    text-align: center;
+}
+
+.container {
+    background-color: var(--second-black);
+    width: 30%;
+    margin: 5rem auto;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+img {
+    width: 25%;
+    border-radius: 100%;
+    margin-top: 2rem;
+}
+
+h2 {
+    color: var(--yellow);
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--third-black);
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+    font-weight: 600;
+}
+
+a:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+a:last-child {
+    margin-bottom: 2rem;
+}
