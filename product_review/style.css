@@ -55,7 +55,6 @@ img {
     margin-bottom: 2rem;
 }
 
-
 h2, p, .price span, .price s {
     color: var(--green);
     font-family: var(--text-font);
@@ -63,7 +62,7 @@ h2, p, .price span, .price s {
 
 h1 {
     font-family: var(--headings-font);
-    font-size: 200%;
+    font-size: calc(2rem + 1vw); /* Base responsive font size */
     margin-top: 0.5rem;
 }
 
@@ -109,17 +108,18 @@ a {
 
 @media (min-width: 850px) {
     .container {
-        width: 40%;
+        width: 50%;
+        height: auto;
         display: flex;
         flex-flow: row wrap;
-        flex-direction: column;
-        height: 60vh;
+        flex-direction: row;
         margin: 8rem auto;
     }
 
     img {
         width: 50%;
-        height: 100%;
+        height: auto;
+        object-fit: cover;
         border-top-right-radius: 0px;    
         border-bottom-left-radius: 10px;
     }
@@ -128,11 +128,15 @@ a {
         width: 50%;
         margin: 0;
         padding: 1.5rem;
-        height: 60vh;
+        height: auto;
     }
 
     h1 {
-        font-size: 200%;
+        font-size: calc(2rem + 1.5vw);
+    }
+    
+    p {
+        font-size: 100%;
     }
 
 }
