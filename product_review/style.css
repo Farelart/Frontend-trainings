@@ -126,9 +126,9 @@ a {
 
     .text{
         width: 50%;
+        height: auto;
         margin: 0;
         padding: 1.5rem;
-        height: auto;
     }
 
     h1 {

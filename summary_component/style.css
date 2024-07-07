@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --blue: #4d38f5;
+    --circle-blue: #462ad4;
+    --white: #ffffff;
+    --second-blue: #2a2f95;
+    --dkblue: #333c5a;
+    --green: #41b497;
+    --bggreen: #f2fbfa;
+    --bgblue: #f3f3fd;
+    --yellow: #ffcc5e;
+    --bgyellow: #fffbf2;
+    --red: #e86f76;
+    --gray: #d0d9dc; 
+    --dkgray: #a5acaf;
+    --bg-red: #fff6f5;
+    --headings-font: "Outfit";
+    --text-font: "Zilla Slab";
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    font-family: var(--headings-font);
+}
+
+.first {
+    background-color: var(--blue);
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+    padding: 1.5rem 3rem;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.first h2 {
+    margin-top: calc(0.5rem + 0.5vw);
+}
+
+.first h3 {
+    font-weight: 600;
+    color: var(--gray);
+    margin-bottom: calc(0.5rem + 0.5vw);
+}
+
+.first p{
+    color: var(--gray);
+}
+
+.circle {
+    background-color: var(--circle-blue);
+    width: 50%;
+    height: auto;
+    padding: 1.5rem;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle h1 {
+    font-size: calc(3rem + 1vw);
+}
+
+.circle h3 {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--gray);
+}
+
+.second {
+    padding: 1rem;
+}
+
+.second h2 {
+    font-size: calc(1rem + 0.8vw);
+    color: var(--dkblue);
+}
+
+.card {
+    background-color: var(--bg-red);
+    color: var(--red);
+    margin: 0.8rem 0;
+    padding: calc(0.5rem + 0.5vw);
+    font-size: calc(0.6rem + 1vw);
+    border-radius: 7px;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card .right {
+    color: var(--dkgray);
+}
+
+.card h4 span {
+    color: var(--dkblue);
+}
+
+.card h4 i {
+    margin-right: 0.7rem;
+    font-size: calc(0.5rem + 1.3vw);
+
+}
+
+.card:nth-child(3) {
+    background-color: var(--bgyellow);
+    color: var(--yellow);
+}
+
+.card:nth-child(4) {
+    background-color: var(--bggreen);
+    color: var(--green);
+}
+
+.card:nth-child(5) {
+    background-color: var(--bgblue);
+    color: var(--second-blue);
+}
+
+.button {
+    margin: 0 auto;
+    background-color: var(--dkblue);
+    text-align: center;
+    padding: 0.7rem;
+    border-radius: 3rem;
+    margin-top: 2rem;
+}
+
+.button a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (min-width: 850px) {
+    .container {
+        width: 50%;
+        margin: 8rem auto;
+        display: flex;
+        flex-flow: row wrap;
+        flex-direction: row;
+    }
+
+    .first {
+        width: 50%;
+        height: auto;
+        border-radius: 40px;
+    }
+
+    .second {
+        width: 50%;
+        height: auto;
+        padding: calc(1rem + 1vw);
+    }
+}
