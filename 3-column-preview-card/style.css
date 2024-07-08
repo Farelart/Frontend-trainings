@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --orange: #e28525;
+    --green: #016972;
+    --dkgreen: #00403f;
+    --white: #ffffff;
+    --bg-white: #f2f2f2;
+    --font: "Outfit";
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg-white);
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 10vw auto;
+    color: var(--white);
+    font-family: var(--font);
+}
+
+.card {
+    padding: 10vw;
+    min-width: 210px;
+}
+
+.card i {
+    display: block;
+    font-size: 300%;
+    margin-bottom: 3vh;
+}
+
+.card h2 {
+    font-size: 250%;
+    margin-bottom: 4vh;
+}
+
+.card:nth-child(1) {
+    background-color: var(--orange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card:nth-child(2) {
+    background-color: var(--green);
+}
+
+.card:nth-child(3) {
+    background-color: var(--dkgreen);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.button {
+    background-color: var(--white);
+    width: 50%;
+    padding: 3vw;
+    border-radius: 10rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    margin-top: 5vh;
+}
+
+
+.button a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.a-or {
+    color: var(--orange);
+}
+
+.a-gr {
+    color: var(--green);
+}
+
+.a-dkgr {
+    color: var(--dkgreen);
+}
+
+@media (min-width: 850px) {
+    .container {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card {
+        width: 33%;
+        padding: 3vw;
+    }
+
+    .card:nth-child(1) {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .card:nth-child(3) {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    .button {
+        width: 70%;
+        padding: 1vw;
+    }
+}
