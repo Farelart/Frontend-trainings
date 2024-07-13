@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --body-bg: #deebf4;
+    --white: #ffffff;
+    --secong-bg: #2bb3b1;
+    --third-bg: #4abebd;
+    --hot-green: #bfdf32;
+    --span: #63e0de;
+    --font: "Outfit"
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4,p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-bg);
+    font-family: var(--font);
+    font-size: 80%;
+}
+
+.container {
+    width: 85%;
+    margin: 3rem auto;
+}
+
+article {
+    padding: 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.first {
+    background-color: var(--white);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    grid-area: first;
+}
+
+.first h2 {
+    color: var(--secong-bg);
+}
+
+.first h3 {
+    color: var(--hot-green);
+}
+
+.first p {
+    color: var(--third-bg);
+}
+
+.second {
+    background-color: var(--secong-bg);
+    color: var(--white);
+    grid-area: second;
+}
+
+.second h1 {
+    font-size: 2rem;
+    position: relative;
+    font-weight: 600;
+}
+
+.second h1 span{
+    font-size: 1rem;
+    font-weight: normal;
+    position: absolute;
+    bottom: 10px;
+    left: 70px;
+    color: var(--span);
+}
+
+.second .button {
+    background-color: var(--hot-green);
+    padding: 3vw;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.button a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.third {
+    background-color: var(--third-bg);
+    color: var(--white);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    grid-area: third;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@media (min-width: 950px) {
+
+    .container {
+        margin: 10rem  auto;
+        width: 40%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "first first"
+            "second third";
+    }
+
+    article {
+        padding: 2vw;
+    }
+
+    .second .button {
+        padding: 1vw;
+    }
+
+    .second {
+        border-bottom-left-radius: 7px;
+    }
+
+    .third {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 7px;
+    }
+}
