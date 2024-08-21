@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="" class="logo">ADVENTURE</a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Adventures</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="">Infos</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <i class='bx bx-menu'></i>
+    </nav>
+    <header></header>
+</body>
+
+<script>
+    const menu = document.querySelector(".bx-menu");
+    const navlinks = document.querySelector(".nav-links");
+
+    menu.addEventListener('click', () => {
+        navlinks.classList.toggle("mobile-menu");
+
+        if (menu.classList.contains('bx-menu')) {
+            menu.classList.remove('bx-menu');
+            menu.classList.add('bx-cross');
+        } else {
+            menu.classList.remove('bx-cross');
+            menu.classList.add('bx-menu');
+        }
+    });
+</script>
+</html>
