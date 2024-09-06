@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bevan:ital@0;1&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --alfa: "Alfa Slab One";
+    --bevan: "Bevan";
+    --outfit: "Outfit";
+    --dk-blue: #221d2c;
+    --purple: #521f51;
+    --purple-bg: #f7f2f8;
+    --gray: #ab99a7;
+    --white: #ffffff;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--outfit);
+}
+
+.main {
+    width: 80%;
+    margin: 8rem auto;
+    max-width: 500px;
+}
+
+.main .hero .hero__text {
+    text-align: center;
+}
+
+.main .hero .hero__text h1 {
+    font-size: 3rem;
+    color: var(--purple);
+    margin-bottom: 1.5rem;
+}
+
+.main .hero .hero__text p {
+    color: var(--gray);
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.main .hero .hero__img .star_review {
+    background-color: var(--purple-bg);
+    color: var(--purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.main .hero .hero__img .star_review h2 {
+    font-size: 1rem;
+}
+
+.hero__img .star_review .stars {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero__img .star_review .stars img {
+    width: 0.8rem;
+}
+
+.main .hero {
+    margin-bottom: 4rem;
+}
+
+.customers_reviews .review {
+    background-color: var(--purple);
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.customers_reviews .review .profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.customers_reviews .review .profile img {
+    width: 3rem;
+    border-radius: 100%;
+}
+
+.customers_reviews .review .profile .details h2, h3{
+    font-size: 0.8rem;
+}
+
+.customers_reviews .review .profile .details h3 {
+    font-weight: normal;
+    color: var(--gray);
+}
+
+.customers_reviews .review p {
+    font-size: 1rem;
+}
+
+@media (min-width: 1000px) {
+    .main {
+        max-width: 1500px;
+        margin: 40rem auto;
+    }
+
+    .main .hero {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        gap: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .main .hero .hero__text {
+        width: 50%;
+        text-align: left;
+    }
+
+    .main .hero .hero__img {
+        width: 50%;
+        align-self: center;
+        position: relative;
+    }
+
+    .main .hero .hero__img .star_review {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .hero__img .star_review .stars {
+        margin-bottom: 0;
+    }
+
+    .main .hero .hero__img .star_review {
+        padding: 1rem;
+    }
+
+    .main .hero .hero__img .star_review:nth-child(2) {
+        position: relative;
+        left: 30px;
+    }
+
+    .main .hero .hero__img .star_review:last-child {
+        position: relative;
+        left: 60px;
+    }
+
+    .main .customers_reviews {
+        display: flex;
+        gap: 2rem;
+        position: relative;
+    }
+
+    .main .customers_reviews .review:nth-child(2) {
+        position: relative;
+        top: 30px;
+    }
+
+    .main .customers_reviews .review:last-child {
+        position: relative;
+        top: 60px;
+    }
+    
+}
