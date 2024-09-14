@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bevan:ital@0;1&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --alfa: "Alfa Slab One";
+    --bevan: "Bevan";
+    --outfit: "Outfit";
+    --bg: #fafafa;
+    --normal-gray: #676666;
+    --light-gray: #a09d9d;
+    --dark-gray: #393838;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, p, hr {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--outfit);
+    font-size: 0.8rem;
+    background-color: var(--bg);
+    color: var(--light-gray);
+}
+
+main {
+    width: 75%;
+    max-width: 400px;
+    margin: 5rem auto;
+}
+
+.texts {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.texts h1 {
+    margin: 0.2rem 0 0.5rem;
+    color: var(--dark-gray);
+    font-size: 1.3rem;
+}
+
+.texts p:first-child {
+    color: var(--normal-gray);
+    font-size: 1.3rem;
+}
+
+.texts p:last-child {
+    color: var(--light-gray);
+}
+
+.box {
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    margin: 0 auto 2rem;
+    padding: 1.5rem;
+    font-size: 0.7rem;
+    max-width: 300px;
+}
+
+.box h2 {
+    color: var(--normal-gray);
+    margin-bottom: 0.5rem;
+}
+
+.box img {
+    width: 20%;
+    margin-top: 2rem;
+    margin-left: auto;
+}
+
+.boxes .box:first-child {
+    border-top: 4px solid #00c4cc; /* Top line */
+}
+
+.twoBoxes .box:nth-child(1) {
+    border-top: 4px solid #de5b60; /* Top line */
+}
+
+.twoBoxes .box:nth-child(2) {
+    border-top: 4px solid #abcd4f; /* Top line */
+}
+
+.boxes .box:nth-child(3) {
+    border-top: 4px solid #3a90f2; /* Top line */
+}
+
+@media (min-width: 900px) {
+    main {
+        width: 80%;
+        max-width: 1200px;
+        margin: 10rem auto;
+    }
+
+    .boxes {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        gap: 2rem;
+    }
+
+    .twoBoxes {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .box {
+        margin: 0 auto;
+    }
+
+    .boxes .top {
+        align-self: center;
+    }
+
+    .texts {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto 4rem;
+    }
+
+}
