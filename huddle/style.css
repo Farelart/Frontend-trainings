@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bevan:ital@0;1&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --outfit: "Outfit";
+    --purple: #674bb1;
+    --white: #ffffff;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    background-color: var(--purple);
+    background-image: url('/huddle-landing-page-with-single-introductory-section-master/images/bg-mobile.svg');
+    background-size: cover; /* Makes sure the image covers the whole background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    font-family: var(--outfit);
+}
+
+main {
+    width: 80%;
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+.logo {
+    width: 30%;
+    margin-bottom: 5rem;
+}
+
+.hero .text {
+    margin-top: 5rem;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 6rem;
+}
+
+.hero .text h2, p {
+    margin-bottom: 1.5rem;
+}
+
+.hero .text p {
+    font-weight: 300;
+}
+
+.hero .text button {
+    padding: 0.5rem 4rem;
+    border-radius: 100px;
+    border: 0;
+    background-color: var(--white);
+    color: var(--purple);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+footer i {
+    color: var(--white);
+    padding: 0.4rem;
+    border: 1px solid var(--white);
+    border-radius: 100%;
+}
+
+@media (min-width: 800px) {
+    body {
+        background-image: url('/huddle-landing-page-with-single-introductory-section-master/images/bg-desktop.svg');
+    }
+
+    main {
+        width: 80%;
+        max-width: 1000px;
+        margin: 3rem auto;
+    }
+
+    .logo {
+        width: 20%;
+        margin-bottom: 5rem;
+    }
+
+    .hero {
+        display: flex;
+        gap: 3rem;
+    }
+
+    .hero img {
+        width: 50%;
+    }
+
+    .hero .text {
+        text-align: left;
+    }
+
+    footer {
+        justify-content: flex-end;
+        margin-top: 2rem;
+    }
+}
