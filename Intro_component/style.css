@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bevan:ital@0;1&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --outfit: "Outfit";
+    --light-rose: #ff7978;
+    --some-purple: #5d54a3;
+    --green: #37cc8a;
+    --white: #ffffff;
+    --gray: #dedada;
+    --dk-gray: #9a9797;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-rose);
+    background-image: url('/intro-component-with-signup-form-master/images/bg-intro-desktop.png');
+    background-size: cover; /* Makes sure the image covers the whole background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    font-family: var(--outfit);
+}
+
+main {
+    width: 85%;
+    max-width: 300px;
+    margin: 5rem auto;
+}
+
+.text {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--white);
+}
+
+.text h1 {
+    margin-bottom: 1.2rem;
+}
+
+.info .button {
+    background-color: var(--some-purple);
+    padding: 1rem 3rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 8px -4px lightblue;
+}
+
+.info .button a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+.info .button a span {
+    font-weight: bold;
+}
+
+.personal {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px -4px lightblue;
+
+}
+
+.personal form {
+    width: 80%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.personal input {
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 5px;
+    border: 1px solid var(--gray);
+}
+
+.personal input::placeholder {
+    font-weight: bold;
+}
+
+.personal  button {
+    padding: 0.9rem;
+    border-radius: 5px;
+    border: 0;
+    background-color: var(--green);
+    color: var(--white);
+    text-transform: uppercase;
+    font-family: var(--outfit);
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+}
+
+.personal p {
+    text-align: center;
+    font-size: 0.65rem;
+    padding: 0 1.5rem;
+    color: var(--dk-gray);
+    margin-bottom: 0.8rem;
+}
+
+.personal p span {
+    color: var(--light-rose);
+    font-weight: bold;
+}
+
+@media (min-width: 700px) {
+    main {
+        width: 80%;
+        max-width: 1200px;
+        margin: 15rem auto;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text {
+        width: 50%;
+        text-align: left;
+    }
+
+    .text h1 {
+        font-size: 3rem;
+    }
+
+    .info {
+        width: 50%;
+    }
+}
