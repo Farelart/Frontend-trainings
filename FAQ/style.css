@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bevan:ital@0;1&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --outfit: "Outfit";
+    --black: #000000;
+    --blue: #faeeff;
+    --dk-blue: #311535;
+    --gray: #d2cfd2;
+    --white: #ffffff;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    background: linear-gradient(to bottom, #1e032a 50%, #e8d3f4 50%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    font-family: var(--outfit);
+    font-size: 0.8rem;
+}
+
+.faq {
+    width: 60%;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.faq h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.faq .qa {
+    margin-bottom: 1.5rem;
+}
+
+.faq .question {
+    display: flex;
+    justify-content: space-between;
+}
+
+.qa .answer-invisible {
+    height: 0;
+    opacity: 0;
+}
+
+.qa .answer-visible {
+    height: 20%;
+    opacity: 1;
+    transition: opacity 0.7s ease;
+}
