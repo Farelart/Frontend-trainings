@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Home page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9ca23cc636.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu">
+            <a href=""><h1>W.</h1></a>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="nav_links">
+            <li><a href="">Home</a></li>
+            <li><a href="">New</a></li>
+            <li><a href="">Popular</a></li>
+            <li><a href="">Trending</a></li>
+            <li><a href="">Categories</a></li>
+        </ul>
+    </nav>
+    <main class="main_visible">
+        <section class="primary">
+            <section class="hero_left">
+                <img src="news-homepage-main/assets/images/image-web-3-desktop.jpg" alt="">
+                <section class="hero_left_text">
+                    <h2>The Bright Future of Web 3.0?</h2>
+                    <article>
+                        <p>
+                            We dive into the next evolution of the web that claims to put the power of the
+                            platforms back into the hands of the people. But is it really fulfilling its promise?
+                        </p>
+                        <button>Read more</button>
+                    </article>
+                </section>
+            </section>
+
+            <section class="hero_right">
+                <div>
+                    <h3>New</h3>
+                    <article>
+                        <h4>Hydrogen VS Electric Cars</h4>
+                        <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+                        <hr>
+                    </article>
+                    <article>
+                        <h4>Hydrogen VS Electric Cars</h4>
+                        <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+                        <hr>
+                    </article>
+                    <article>
+                        <h4>Hydrogen VS Electric Cars</h4>
+                        <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+                    </article>
+                </div>
+            </section>
+        </section>
+
+        <section class="blog">
+            <article>
+                <img src="news-homepage-main/assets/images/image-retro-pcs.jpg" alt="">
+                <div class="text">
+                    <h3>01</h3>
+                    <h4>Reviving Retro PCs</h4>
+                    <p>
+                        What happens when old PCs are given modern upgrades?
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <img src="news-homepage-main/assets/images/image-top-laptops.jpg" alt="">
+                <div class="text">
+                    <h3>02</h3>
+                    <h4>Top 10 Laptops of 2022</h4>
+                    <p>
+                        Our best picks for various needs and budgets.
+                    </p>
+                </div>
+            </article>
+            <article>
+
+                <img src="news-homepage-main/assets/images/image-gaming-growth.jpg" alt="">
+                <div class="text">
+                    <h3>03</h3>
+                    <h4>The Growth of Gaming</h4>
+                    <p>
+                        How the pandemic has sparked fresh opportunities.
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+    <script>
+        const menu = document.querySelector(".fa-bars");
+        const nav_links = document.querySelector(".nav_links");
+        const main_visible = document.querySelector(".main_visible");
+
+        menu.addEventListener("click", () => {
+            nav_links.classList.toggle("nav_visible");
+            main_visible.classList.toggle("main_invisible");
+
+            if(menu.classList.contains("fa-bars")) {
+                menu.classList.remove("fa-bars");
+                menu.classList.add("fa-xmark");
+            } else {
+                menu.classList.remove("fa-xmark");
+                menu.classList.add("fa-bars");
+            }
+        });
+    </script>
+</html>

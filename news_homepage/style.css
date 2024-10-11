@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bevan:ital@0;1&family=Outfit:wght@100..900&display=swap');
+
+
+:root {
+    --outfit: "Outfit";
+    --alfa: "Alfa Slab One";
+    --bevan: "Bevan";
+    --beige: #fefdf9;
+    --night-blue: #00001a;
+    --orange: #d84a3c;
+    --yellow: #e39c48;
+    --gray: #5a5a5d;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--beige);
+    width: 80%;
+    margin: 0 auto;
+    font-family: var(--outfit);
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a h1 {
+    color: var(--night-blue);
+    font-family: var(--alfa);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu i {
+    font-size: 1.5rem;
+}
+
+.nav_links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 0;
+    opacity: 0;
+}
+
+.nav_visible {
+    height: 100vh;
+    opacity: 1;
+    transition: all 0.7s ease;
+}
+
+.main_invisible {
+    display: none;
+}
+
+.nav_links li a {
+    font-family: var(--outfit);
+    color: var(--night-blue);
+    font-size: 1.2rem;
+} 
+
+.navbar {
+    margin: 1.5rem 0;
+}
+
+.primary {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.primary .hero_left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.primary .hero_left .hero_left_text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.primary .hero_left .hero_left_text h2 {
+    color: var(--night-blue);
+    font-size: 2rem;
+}
+
+.primary .hero_left .hero_left_text article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.primary .hero_left .hero_left_text article p {
+    color: var(--gray);
+}
+
+.primary .hero_left .hero_left_text article button {
+    width: 60%;
+    background-color: var(--orange);
+    color: var(--night-blue);
+    text-transform: uppercase;
+    font-family: var(--outfit);
+    font-weight: bold;
+    font-size: 0.65rem;
+    letter-spacing: 0.1rem;
+    padding: 0.5rem 0;
+    border: 0;
+}
+
+.primary .hero_right {
+    background-color: var(--night-blue);
+    color: var(--beige);
+}
+
+.primary .hero_right div {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+}
+
+.primary .hero_right div h3 {
+    font-size: 1.5rem;
+    color: var(--yellow);
+    margin-bottom: 1rem;
+}
+
+.primary .hero_right div article:nth-child(3) {
+    margin: 1.5rem 0;
+}
+
+.primary .hero_right div article h4 {
+    margin-bottom: 0.5rem;
+}
+
+.primary .hero_right div article p {
+    font-weight: lighter;
+}
+
+.primary .hero_right div article hr {
+    margin-top: 1.5rem;
+}
+
+.blog {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.blog article {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.blog article img {
+    width: 30%;
+}
+
+.blog article .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.blog article .text h3 {
+    font-size: 1.5rem;
+    color: var(--orange);
+}
+
+.blog article .text p {
+    color: var(--gray);
+}
+
+
+@media (min-width: 900px) {
+
+    body {
+        max-width: 1200px;
+    }
+
+    .primary {
+        flex-direction: row;
+        margin-bottom: 5rem;
+    }
+
+    .primary .hero_left {
+        width: 70%;
+    }
+
+    .primary .hero_right {
+        width: 30%;
+    }
+
+    .primary .hero_left .hero_left_text {
+        flex-direction: row;
+    }
+
+    .primary .hero_left .hero_left_text h2 {
+        width: 50%;
+        font-size: 3rem;
+    }
+
+    .primary .hero_left .hero_left_text article {
+        width: 50%;
+    }
+
+    .blog {
+        flex-direction: row;
+    }
+
+    .blog article img {
+        width: 30%;
+    }
+
+    .blog article .text {
+        width: 70%;
+    }
+}
