@@ -213,6 +213,21 @@ a {
         max-width: 1200px;
     }
 
+    .menu .fa-bars {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar .nav_links {
+        height: 100%;
+        opacity: 1;
+        flex-direction: row;
+    }
+
     .primary {
         flex-direction: row;
         margin-bottom: 5rem;
