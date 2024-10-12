@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro section</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9ca23cc636.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="menu">
+                <a href=""><h1>snap</h1></a>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav_links">
+                <li>
+                    <div class="drop-name"><span>Features</span><i class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="drop-links">
+                        <li><a href="">Todo List</a></li>
+                        <li><a href="">Calendar</a></li>
+                        <li><a href="">Reminders</a></li>
+                        <li><a href="">Planning</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="drop-name"><span>Company</span><i class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="drop-links">
+                        <li><a href="">History</a></li>
+                        <li><a href="">Our Team</a></li>
+                        <li><a href="">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href=" ">Careers</a></li>
+                <li class="about"><a href=" ">About</a></li>
+                <li class="log"><a href=" ">Login</a></li>
+                <li><a href=" " class="register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main_visible">
+        <section class="hero">
+            <div class="hero_left">
+                <h2>Make remote work</h2>
+                <p>
+                    Get your team in sync, no matter your location. Streamline processes, create team
+                    rituals, and watch productivity soar.
+                </p>
+                <a href="">Learn more</a>
+                <article>
+                    <img src="intro-section-with-dropdown-navigation-main/images/client-databiz.svg" alt="">
+                    <img src="intro-section-with-dropdown-navigation-main/images/client-audiophile.svg" alt="">
+                    <img src="intro-section-with-dropdown-navigation-main/images/client-meet.svg" alt="">
+                    <img src="intro-section-with-dropdown-navigation-main/images/client-maker.svg" alt="">
+                </article>
+            </div>
+            <div class="hero_right">
+                <img src="intro-section-with-dropdown-navigation-main/images/image-hero-desktop.png" alt="">
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    const menu = document.querySelector(".fa-bars");
+    const nav_links = document.querySelector(".nav_links");
+    const main_visible = document.querySelector(".main_visible");
+
+    const chevronDowns = document.querySelectorAll(".fa-chevron-down");
+    const dropLinks = document.querySelectorAll(".drop-links");
+
+    menu.addEventListener("click", () => {
+        nav_links.classList.toggle("nav_links_visible");
+        main_visible.classList.toggle("main_invisible");
+
+        if(menu.classList.contains("fa-bars")) {
+            menu.classList.remove("fa-bars");
+            menu.classList.add("fa-xmark");
+        } else {
+            menu.classList.remove("fa-xmark");
+            menu.classList.add("fa-bars");
+        }
+    });
+
+    chevronDowns.forEach((chevronDown) => {
+        chevronDown.addEventListener("click", () => {
+            /* dropLinks.forEach((dropLink) => {
+                dropLink.classList.toggle("drop-links-visible");
+            }); */
+
+            const parentLi = chevronDown.closest("li");  // Find the closest parent <li>
+            const dropLinks = parentLi.querySelector(".drop-links");  // Get the drop links in this <li>
+        
+            // Toggle the visibility of only this specific drop-links
+            dropLinks.classList.toggle("drop-links-visible");
+
+            if(chevronDown.classList.contains("fa-chevron-down")) {
+                chevronDown.classList.remove("fa-chevron-down");
+                chevronDown.classList.add("fa-chevron-up");
+            } else {
+                chevronDown.classList.remove("fa-chevron-up");
+                chevronDown.classList.add("fa-chevron-down");
+            }
+        });
+    });
+</script>
+</html>

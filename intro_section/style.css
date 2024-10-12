@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bevan:ital@0;1&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --outfit: "Outfit";
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #535153;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--outfit);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navbar {
+    margin-top: 1.5rem;
+}
+
+.navbar .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.navbar .nav_links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 0;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--gray);
+}
+
+.navbar .nav_links a {
+    text-decoration: none;
+    color: var(--gray);
+}
+
+.navbar .nav_links .register {
+    border: 2px solid var(--gray);
+    border-radius: 15px;
+    padding: 0.5rem 8rem;
+}
+
+.navbar .nav_links .drop-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar .nav_links_visible {
+    height: 100vh;
+    opacity: 1;
+    transition: all 0.7s ease;
+}
+
+.nav_links .drop-links {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 0;
+    opacity: 0;
+}
+
+.nav_links .drop-links-visible {
+    height: 100%;
+    opacity: 1;
+    margin: 2rem;
+    transition: all 0.7s ease;
+}
+
+.main_invisible {
+    display: none;
+}
+
+.main_visible {
+    margin-top: 2rem;
+}
+
+.main_visible .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+}
+
+.main_visible .hero .hero_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.main_visible .hero .hero_left h2 {
+    font-size: 2rem;
+}
+
+.main_visible .hero .hero_left p {
+    color: var(--gray);
+    text-align: center;
+}
+
+.main_visible .hero .hero_left a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.main_visible .hero .hero_left article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.main_visible .hero .hero_left article img {
+    width: 17%;
+    max-width: fit-content;
+}
+
+@media (min-width: 1000px) {
+    body {
+        max-width: 1200px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between  ;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .navbar .menu .fa-bars {
+        display: none;
+    }
+
+    .navbar .nav_links {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        flex-direction: row;
+        font-size: 1rem;
+    }
+
+    /* .navbar .nav_links .about {
+        margin-right: auto;
+    } */
+
+    .navbar .nav_links .log {
+        margin-left: auto;
+    }
+
+    .navbar .nav_links .register {
+        padding: 0.5rem 2rem;
+    }
+
+    .main_visible {
+        margin-top: 4rem;
+    }
+
+    .main_visible .hero {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .main_visible .hero .hero_left {
+        width: 50%;
+        align-items: start;
+        justify-content: end;
+        gap: 2rem;
+    }
+    
+    .main_visible .hero .hero_left h2{
+        font-size: 5rem;
+    }
+
+    .main_visible .hero .hero_left p{
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .main_visible .hero .hero_left a  {
+        padding: 0.8rem 1.2rem;
+    }
+
+    .main_visible .hero .hero_left article {
+        justify-content: start;
+        align-items: center;
+        justify-self: flex-end;
+    }
+
+    .main_visible .hero .hero_right {
+        width: 50%;
+    }
+}
