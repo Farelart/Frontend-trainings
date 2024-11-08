@@ -1,13 +1,28 @@
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 
-export default function Search() {
+type SearchProps = {
+  username: string;
+  setUsername: React.Dispatch<React.SetStateAction<string>>;
+  handleSubmit: (e: React.FormEvent) => void;
+};
+
+export default function Search({
+  username,
+  setUsername,
+  handleSubmit,
+}: SearchProps) {
   return (
-    <form action="" className="search">
+    <form onSubmit={handleSubmit} action="" className="search">
       <div className="search__bar">
         <MagnifyingGlassIcon className="search__icon"></MagnifyingGlassIcon>
-        <input type="text" placeholder="Search Github username..." />
+        <input
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Search Github username..."
+        />
       </div>
-      <button>Search</button>
+      <button type="submit">Search</button>
     </form>
   );
 }
