@@ -1,6 +1,8 @@
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Capture d’écran 2024-11-08 051720](https://github.com/user-attachments/assets/82139cf5-c905-4a2a-8d20-192f52c76f57)
+![Capture d’écran 2024-11-08 051657](https://github.com/user-attachments/assets/dcbacf00-5a3d-4a7e-8ce6-3e965a5fe870)
 
 Currently, two official plugins are available:
 
@@ -20,7 +22,8 @@ export default tseslint.config({
     parserOptions: {
       project: ['./tsconfig.node.json', './tsconfig.app.json'],
       tsconfigRootDir: import.meta.dirname,
-    },
+    },![Capture d’écran 2024-11-08 051720](https://github.com/user-attachments/assets/a38057a7-3c23-4126-b426-3d753fc7def7)
+
   },
 })
 ```
