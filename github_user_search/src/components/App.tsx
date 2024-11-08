@@ -13,7 +13,7 @@ function App() {
   const handleSearch = async (username: string) => {
     try {
       const octokit = new Octokit({
-        auth: "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",
+        auth: import.meta.env.VITE_GITHUB_TOKEN,
       });
 
       const response = await octokit.request("GET /users/{username}", {
